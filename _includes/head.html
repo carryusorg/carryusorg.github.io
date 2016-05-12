@@ -8,6 +8,14 @@
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
+    {% if site.favicon %}
+    {% assign faviconsize = site.favicon | split: '-' | last | split: '.' | first | default : "256" %}
+      <link rel="icon" type="image/png" 
+          sizes="{{ faviconsize }}x{{ faviconsize }}" href="{{ site.favicon }}">
+      <link rel="apple-touch-icon" 
+          sizes="{{ faviconsize }}x{{ faviconsize }}" href="{{ site.favicon }}">
+    {% endif %}
+
     <!-- Bootstrap Core CSS -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
