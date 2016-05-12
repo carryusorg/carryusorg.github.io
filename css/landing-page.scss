@@ -105,7 +105,8 @@ h1,
 }
 
 .jumbotron  p {
-    text-shadow: 1px 1px 1px $gray-darker,1px 1px 3px $gray-darker,1px 1px 5px $gray-darker,1px 1px 10px $gray-darker;
+    font-weight:400;
+    text-shadow: 1px 1px 1px $gray-darker,1px 1px 3px $gray-darker,1px 1px 5px $gray-darker,0px 0px 20px $gray-darker;
 }
 
 
