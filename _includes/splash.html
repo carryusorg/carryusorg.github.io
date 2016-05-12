@@ -1,0 +1,53 @@
+  <div class="splash"
+    {%if include.content.link %} id="{{include.content.link | replace : ' ', '-'}}" {%endif%}
+    {%if include.content.img %}
+    style="background-image:url('{{include.content.img}}')"
+    {%endif%}>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="splash-message">
+
+            <div class="top">
+              {%if include.content.icon %}
+              <img class="icon" src="{{include.content.icon}}"/>
+              {%endif%}
+              {%if include.content.title %}
+              <h2 class="title">{{ include.content.title }}</h2>
+              {%endif%}
+              {%if include.content.subtitle %}
+              <h3 class="subtitle">{{ include.content.subtitle }}</h3>
+              {%endif%}
+
+            </div>
+            <div class="bottom">
+              {%if include.content.bodytitle %}
+              <h3 class="bodytitle">{{ include.content.bodytitle }}</h3>
+              {%endif%}
+              {%if include.content.body %}
+              {{ include.content.body | markdownify }}
+              {%endif%}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.intro-splash -->
+
+
+  {%comment%}
+  <!-- <hr class="splash-divider"> -->
+  <!-- <ul class="list-inline splash-social-buttons">
+    {% for social in site.social %}
+    <li>
+      <a href="{{ social.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+    </li>
+    {% endfor %}
+  </ul> -->
+  {%endcomment%}

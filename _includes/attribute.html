@@ -1,0 +1,4 @@
+{% if include.img %}
+{% assign attribute = site.data.img[include.img] %}
+<a href="{{attribute.source}}" target="_blank">{{attribute.author}}</a>
+{%endif%}

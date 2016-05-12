@@ -1,0 +1,38 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://Carry.Us.Org
+title: Carry.Us.Org
+launchdate: August 2016
+logo: img/carryusorg-logo-256.png
+email: hello@Carry.Us.Org
+author: Manuel Mejía
+description: > # "Write an awesome description for your new site here. 
+  Carry.Us.Org supports a healthy and inspiring community of 
+  independent fundraising athletes who, by their athletic accomplishments, 
+  raise money and awareness for public charities across the US and Canada.
+copyright: 'Copyright &copy; 2015 Carry.Us.Org. All Rights Reserved.'
+# credits: '<a href="http://startbootstrap.com/">Start Bootstrap</a>.'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+favicon: /img/carryusorg-logo-256.png
+
+
+social:
+  - title: twitter
+    url: https://twitter.com/CarryUsOrg
+  - title: github
+    url: https://github.com/carryusorg
+email:
+  - hello@carry.us.org
