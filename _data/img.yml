@@ -14,6 +14,14 @@ mountain-bike-transalp.jpg:
   source: https://pixabay.com/en/mtb-mountain-bike-alpine-transalp-1169958/
   author: moerschy
 
+mountain-bike-transalp-2.jpg:
+  source: https://pixabay.com/en/mtb-mountain-bike-alpine-transalp-1169961/
+  author: moerschy
+
+mountain-bike-transalp-3.jpg:
+  source: https://pixabay.com/en/singletrail-mountain-bike-bike-175220/
+  author: simon-3
+
 swimmer-in-the-night.jpg:
   source: https://unsplash.com/photos/E9PJO_vL3E8
   author: toddquackenbush
@@ -25,9 +33,15 @@ brazilian-runner.jpg:
 climber-in-the-french-alps.jpg:
   source: https://unsplash.com/photos/KQwl5RnZAqg
   author: wwwynand
+
 twin-peaks-runner.jpg:
   source: https://unsplash.com/photos/XMcoTHgNcQA
   author: sortino
+
 muddy-rope-racer.jpg:
   source: https://unsplash.com/photos/M_yvhtjl5Bw
   author: paulovizeu
+
+trail-runner-legs.jpg:
+  source: https://unsplash.com/photos/8TJbrQGKFyU
+  author: davidmarcu

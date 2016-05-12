@@ -88,78 +88,26 @@ h6 {
     font-weight: 400;
 }
 
-.splash {
+.jumbotron{
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
     background-repeat: no-repeat;
-    background-attachment: center center;
+    background-position: center center;
     background-size: cover;
-    text-shadow: 1px 1px 5px rgba(0,0,0,1);
+    text-shadow: 1px 1px 1px $gray-darker,1px 1px 3px $gray-darker,1px 1px 5px $gray-darker;
 }
 
-.splash-message {
-    position: relative;
-    padding-top: 30%;
-    padding-bottom: 30%;
-    width:100%;
-}
-.splash-message > .top{
-   position:absolute;
-   width:100%;
-   top:20%;
-}
-.splash-message > .bottom{
-   position:absolute;
-   width:100%;
-   bottom:0;
-}
-.splash-message .icon{
-    margin-top:-8em;
-}
-.splash-message  h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+h1,
+.jumbotron h1 {
+    text-shadow: 1px 1px 1px $gray-darker,1px 1px 3px $gray-darker;
 }
 
-.splash-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+.jumbotron  p {
+    text-shadow: 1px 1px 1px $gray-darker,1px 1px 3px $gray-darker,1px 1px 5px $gray-darker,1px 1px 10px $gray-darker;
 }
 
-.splash-message  h3 {
-}
-
-.splash-message  p {
-    font-size:1.2em;
-}
-
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-message > h1 {
-        font-size: 3em;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
-}
 
 .network-name {
     text-transform: uppercase;
@@ -253,4 +201,24 @@ img.icon{
     margin-right: .5em;
     display: block;
     position: relative;    
+}
+
+.v-middle{
+  position: relative;
+  top: 50%;
+  // transform: translateY(-50%);
+}
+.v-padding{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.v-padding-large{
+  padding-top:8em;
+  padding-bottom:8em;
+}
+@media(max-width:767px) {
+.v-padding-large{
+  padding-top:5em;
+  padding-bottom:5em;
+}
 }

@@ -1,36 +1,35 @@
-  <div class="splash"
-    {%if include.content.link %} id="{{include.content.link | replace : ' ', '-'}}" {%endif%}
+  <div class="jumbotron"
+    {%if include.content.link %} 
+    id="{{include.content.link | replace : ' ', '-'}}" 
+    {%endif%}
     {%if include.content.img %}
-    style="background-image:url('{{include.content.img}}')"
+    style="background-image:url('{{include.content.img}}');min-height:440px;margin-bottom:0"
     {%endif%}>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-          <div class="splash-message">
-
-            <div class="top">
-              {%if include.content.icon %}
-              <img class="icon" src="{{include.content.icon}}"/>
-              {%endif%}
-              {%if include.content.title %}
-              <h2 class="title">{{ include.content.title }}</h2>
-              {%endif%}
-              {%if include.content.subtitle %}
-              <h3 class="subtitle">{{ include.content.subtitle }}</h3>
-              {%endif%}
-
-            </div>
-            <div class="bottom">
-              {%if include.content.bodytitle %}
-              <h3 class="bodytitle">{{ include.content.bodytitle }}</h3>
-              {%endif%}
-              {%if include.content.body %}
-              {{ include.content.body | markdownify }}
-              {%endif%}
-            </div>
-
+    <div class="container v-middle">
+      <div class="row v-padding">
+        <div class="col-lg-10 col-lg-offset-1 ">
+          {%if include.content.icon %}
+          <img class="icon" src="{{include.content.icon}}"/>
+          {%endif%}
+          {%if include.content.title %}
+          <h1 class="title">{{ include.content.title }}</h1>
+          {%endif%}
+          {%if include.content.subtitle %}
+          <h3 class="subtitle">{{ include.content.subtitle }}</h3>
+          {%endif%}
+        </div>
+      </div>
+      <div class="v-padding-large"></div>
+      <div class="row v-padding">
+        <div class="col-lg-10 col-lg-offset-1 ">
+          {%if include.content.bodytitle %}
+          <h3 class="bodytitle">{{ include.content.bodytitle }}</h3>
+          {%endif%}
+          {%if include.content.body %}
+          <div class="body">
+          {{ include.content.body | markdownify }}
           </div>
+          {%endif%}
         </div>
       </div>
 
@@ -38,7 +37,7 @@
     <!-- /.container -->
   </div>
   <attr class="attribution">{% include attribute.html img=include.content.img%}</attr>
-  <!-- /.intro-splash -->
+  <!-- /.jumbotron -->
 
 
   {%comment%}

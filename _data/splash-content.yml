@@ -4,7 +4,7 @@
   title: Athletes…
   bodytitle: imagine a better world,
   body: |
-    a world where all people are healthy and well educated,<br/> 
+    a world where all people are healthy and well educated,<br class="hidden-sm"/> 
     and where our animals and environment are treated with care and respect.
 -
   link: Imagine
@@ -16,13 +16,13 @@
 -
   link: Carry Us
   icon: img/carryusorg-logo-256.png
-  img: img/mountain-bike-transalp.jpg
+  img: img/mountain-bike-transalp-2.jpg
   title: Carry.Us.Org
   subtitle: is a charitable fundraising platform for athletes.
   bodytitle: To deepen the impact of your athletic experiences, 
   body: |
     Carry.Us.Org will mentor and guide you with a suite of online tools 
-    and professional expertise. <br/> Our mission is to support you in fundraising 
+    and professional expertise. <br class="hidden-sm"/> Our mission is to support you in fundraising 
     on your own terms for the charities of your choice.
     
     
