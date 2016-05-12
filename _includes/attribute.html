@@ -1,4 +1,9 @@
 {% if include.img %}
-{% assign attribute = site.data.img[include.img] %}
-<a href="{{attribute.source}}" target="_blank">{{attribute.author}}</a>
+{% assign attribute = include.img | split : "/" | last %}
+{% assign attribute = site.data.img[attribute] %}
+{%if attribute %}
+<a href="{{attribute.source}}" target="_blank" title="image credit: {{attribute.author}}">
+  <i class="fa fa-camera fa-fw"></i>
+</a>
+{%endif%}
 {%endif%}
