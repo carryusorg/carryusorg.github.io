@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html%}
+
+    <section id="home">
+    <!-- Header -->
+    {%for splash in site.data.splash-content%}
+    {%include splash.html content=splash%}
+    {%endfor%}
+    </section>
+    <hr/>
+    {% include services.html %}
+
+    {% include survey-form-embed.html %}
+    {% include contact.html %}
+    {% include footer.html %}
+    {% include js.html %}
+  </body>
+</html>
