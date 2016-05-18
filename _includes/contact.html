@@ -5,10 +5,14 @@
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
 						{% for email in site.email %}
-							<a href="mailto:{{ email }}" class="btn btn-success btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+							<a href="mailto:{{ email }}" class="btn btn-success btn-lg">
+							<i class="fa fa-envelope fa-fw"></i> 
+							<span class="network-name">Email</span></a>
 						{% endfor %}
 						{% for social in site.social %}
-							<a href="{{ social.url }}" class="btn btn-info btn-lg"><i class="fa fa-{{ social.title }} fa-fw"></i> <span class="network-name">{{ social.title }}</span></a>
+							<a href="{{ social.url }}" class="btn btn-info btn-lg">
+							<i class="fa fa-{{ social.title }} fa-fw"></i> 
+							<span class="network-name">{{ social.title }}</span></a>
 						{% endfor %}
 				</div>
 			</div>

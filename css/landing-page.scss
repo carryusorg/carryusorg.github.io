@@ -238,3 +238,16 @@ img.icon{
     padding-bottom:5em;
   }
 }
+
+
+.show-on-active{
+    display: none !important;
+}
+.active .show-on-active,
+.active.show-on-active{
+    display:inline-block !important;
+}
+.active .hide-on-active,
+.active.hide-on-active{
+    display: none;
+}
