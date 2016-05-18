@@ -8,6 +8,11 @@
 // Bootstrap mixins
 @import 'bootstrap/mixins';
 
+.btn.toggle {
+  background-color: $gray-dark;
+}
+
+
 // Reset and dependencies
 @import "bootstrap/normalize";
 @import "bootstrap/print";
@@ -218,8 +223,8 @@ img.icon{
   padding-bottom:8em;
 }
 @media(max-width:767px) {
-.v-padding-large{
-  padding-top:5em;
-  padding-bottom:5em;
-}
+  .v-padding-large{
+    padding-top:5em;
+    padding-bottom:5em;
+  }
 }

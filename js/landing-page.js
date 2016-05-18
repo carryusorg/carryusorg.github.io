@@ -20,12 +20,37 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $('div.modal').on('show.bs.modal', function() {
-	var modal = this;
-	var hash = modal.id;
+    var $modal = $(this);
+	var hash = $modal.id;
+    var $button = $(event.relatedTarget) // Button that triggered the modal
+
+    var buttonData = $button.data() || {};
+    var modalData = $modal.data() || {};
+    var $modalChildren = 
+      modalData.toggleChildren === true ? $modal.find('.modal-body').children() :
+      modalData.toggleChildren ? $modal.find(modalData.toggleChildren).children() :
+      false;
+
+
+    if(buttonData.modalTitle){
+      $modal.find(".modal-title").text(buttonData.modalTitle);
+    }
+    if($modalChildren){
+      $modalChildren.each(function(index,element){
+        if(
+          (typeof buttonData.modalShow === Array && buttonData.modalShow.indexOf(element.id) == -1)||
+          (typeof buttonData.modalHide === Array && buttonData.modalHide.indexOf(element.id) != -1)
+          )
+          $(element).hide();
+      });
+    }
+
 	window.location.hash = hash;
 	window.onhashchange = function() {
 		if (!location.hash){
-			$(modal).modal('hide');
+			$modal.modal('hide');
 		}
 	}
+
 });
+
