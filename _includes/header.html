@@ -20,17 +20,18 @@
             <ul class="nav navbar-nav navbar-right"> 
                 {%for splash in site.data.splash-content %} {% if splash.link %}
             	<li>
-                    <a class="page-scroll" href="#{{splash.link | replace : ' ', '-'}}">{{splash.link}}</a>
+                    <a class="page-scroll navbar-link" href="#{{splash.link | replace : ' ', '-'}}">{{splash.link}}</a>
                 </li>   
                 {%endif%}{%endfor%}         
                 <li>
-                    <a class="page-scroll" href="#features">Features</a>
+                    <a class="page-scroll navbar-link" href="#features">Features</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#survey">Survey</a>
+                    <a class="page-scroll inverse navbar-link" href="#interestFormModal" 
+                    data-toggle="modal" data-target="#interestFormModal">Sign Up</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll navbar-link" href="#contact">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -38,5 +39,7 @@
     </div>
     <!-- /.container -->
 </nav>
+{%include firebase-modals.html%}
+
 <div class="v-padding"></div>
 

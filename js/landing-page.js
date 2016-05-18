@@ -19,9 +19,9 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('div.modal').on('show.bs.modal', function() {
+$('div.modal').on('show.bs.modal', function(event) {
     var $modal = $(this);
-	var hash = $modal.id;
+	  var hash = $modal.id;
     var $button = $(event.relatedTarget) // Button that triggered the modal
 
     var buttonData = $button.data() || {};
