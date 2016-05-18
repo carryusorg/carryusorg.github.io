@@ -45,12 +45,12 @@ $('div.modal').on('show.bs.modal', function(event) {
       });
     }
 
-	window.location.hash = hash;
-	window.onhashchange = function() {
-		if (!location.hash){
-			$modal.modal('hide');
-		}
-	}
+	// window.location.hash = hash;
+	// window.onhashchange = function() {
+	// 	if (!location.hash){
+	// 		$modal.modal('hide');
+	// 	}
+	// }
 
 });
 
