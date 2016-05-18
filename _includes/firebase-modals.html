@@ -57,7 +57,7 @@ aria-labelledby="interestFormModalLabel" data-toggle-children="#interestForm">
         <span aria-hidden="true">&times;</span>
         </button>
         <h3 class="modal-title" id="interestFormModalLabel">
-        Launching in August 2016</h3>
+        Launching in {{site.launchdate}}</h3>
       </div>
       <div class="modal-body">
         <form id="interestForm" data-firebase-path="research/athlete-interest" class="form-horizontal">
@@ -79,9 +79,10 @@ aria-labelledby="interestFormModalLabel" data-toggle-children="#interestForm">
             <label for="input-interest-private-beta" class="control-label col-sm-3">
             Private Beta:</label>
             <div class="col-sm-9">
-              <span id="input-help-interest-private-beta" class="help-block">
-              Jump in early as a pre-release participant this summer. <br>
-              (Get extra special care and help to shape our services.)</span>
+              <p id="input-help-interest-private-beta" class="help-block">
+              <big>Jump in early as a "Private Beta" participant this summer. </big><br>
+              Work closely with us to launch and run a campaign of your choice. <br/>
+              Help to refine our products and services.</p>
                <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-warning toggle active">
                   <i class="fa fa-check fa-fw show-on-active"></i> 
