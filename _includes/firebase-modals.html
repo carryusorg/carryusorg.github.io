@@ -39,7 +39,8 @@ aria-labelledby="contactFormModalLabel" data-toggle-children="#contactForm">
         <button type="button" class="btn btn-default" data-dismiss="modal">
         Cancel
         </button>
-        <button type="button" class="btn btn-primary" onclick="submitForm('contactForm')">
+        <button type="button" class="btn btn-primary"  data-dismiss="modal"
+        onclick="submitForm('contactForm')">
         Send
         </button>
       </div>
@@ -181,7 +182,8 @@ aria-labelledby="interestFormModalLabel" data-toggle-children="#interestForm">
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="">
           Cancel
         </button>
-        <button type="button" class="btn btn-primary" onclick="submitForm('interestForm')">
+        <button type="button" class="btn btn-primary"  data-dismiss="modal" 
+        onclick="submitForm('interestForm')">
           Send
         </button>
       </div>
@@ -189,18 +191,53 @@ aria-labelledby="interestFormModalLabel" data-toggle-children="#interestForm">
   </div>
 </div>
 
+<div class="modal fade" id="alertDisplayModal" tabindex="-1" role="dialog" 
+aria-labelledby="alertDisplayModalLabel" data-toggle-children="#alertDisplay">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+ <!--      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="alertDisplayModalLabel">
+        Contact Form</h4>
+      </div>-->
+      <div class="modal-body">
 
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary modal-ok-button"  data-dismiss="modal">
+        Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script> -->
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBoBudiu6KOQ-nWQScfCBJ_pU6kMr8VsTU",
+    authDomain: "carryusorg.firebaseapp.com",
+    databaseURL: "https://carryusorg.firebaseio.com",
+    storageBucket: "project-1356332015033540846.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+
 
 <script>
-
-
 function submitForm(formId){
 
   var $form = $('#'+formId);
   var formArray = $form.serializeArray();
   var formValues = {};
   var formData = $form.data();
+  formData.$form = $form;
   console.log('formData:',formData);
   console.log('formArray:',formArray);
   event.preventDefault();
@@ -208,33 +245,57 @@ function submitForm(formId){
     console.log('parsing input:',input);
     formValues[formArray[input].name] = formArray[input].value;
   }
-  sendToFirebase(formValues,formData);
+  sendToFirebase(formValues,formData,submitFormFirebaseCallback);
 };
 
-function sendToFirebase(values,config){
+function submitFormFirebaseCallback(error,config){
+  var $formModal = null;
+  if(config.$form) $formModal = config.$form.parents('.modal').first();
+
+    if(error) {
+      showAlertDisplayModal("There was an error in saving the form. Please check that all required fields are complaete, and try again.","ERROR",$formModal);
+    }else{
+      showAlertDisplayModal("Success. Thank you for contacting us.","SUCCESS")
+    }
+}
+
+function sendToFirebase(values,config,callback){
   values = values || {};
   config = config || {};
   var firebasePath = config.firebasePath || "";
-  var myFirebaseRef = myFirebaseRef || new Firebase("https://carryusorg.firebaseio.com/"+firebasePath);
+  var myFirebaseRef = myFirebaseRef || firebase.database().ref(firebasePath);
+  // var myFirebaseRef = myFirebaseRef || new Firebase("https://carryusorg.firebaseio.com/"+firebasePath);
       
-  values.timestamp = Firebase.ServerValue.TIMESTAMP;
+  values.timestamp = firebase.database.ServerValue.TIMESTAMP;
   console.log('submitting values:',values);
 
-  Firebase.goOnline();
+  firebase.database().goOnline();
   myFirebaseRef.push(values, function(error){
-    if(error) {
-      displayMessage("there was an error")
-    }else{
-      displayMessage("there was success")
-    }
-    Firebase.goOffline();
+    callback(error,config);
+    firebase.database().goOffline();
   });
 
 }
 
-function displayMessage(message){
-  alert(message);
+function showAlertDisplayModal(message,ALERT_TYPE,$nextModal){
+  var $alert = $('#alertDisplayModal').clone();
+
+  $('.modal-body',$alert).html('<p>'+message+'</p>');
+  if($nextModal){
+  $('.modal-ok-button',$alert).click(
+    function(){
+      $nextModal.modal('show');
+    }
+  );
+  }
+  $alert.on('hidden.bs.modal', function (e) {
+    $alert.remove();
+  });
+  $alert.modal('show');
+  // alert(message);
 }
+
+
 function hideElement(){
   $(this).hide();
 }
