@@ -28,7 +28,7 @@ features:
       - campaign microsites to promote your cause and you fundraising progress
       - a mobile app to track your athletic progress and update your campaign story
       - recieve donations on your phone or on your microsite
-      - collec donor contact information on your phone of or on your microsite
+      - collect donor information on your phone of or on your microsite
       - send emails and post social media updates
       - ect... 
   
@@ -51,4 +51,33 @@ features:
 
 
 pricing:
-  -
+  description: |
+    Carry.Us.Org will never charge a service fee to the athletes, or take a cut from the donations raised. We charge only for each active campaign. This campaign fee is deducted from the tips that athletes collect to fund their campaigns, and will never be charged directly to an athlete  (even if no tips are collected).
+  tiers:
+    -
+      title: Independent Campaigns
+      fees: 5%*
+      features:
+        - Charity Relationship Management
+        - Athlete Fundraising Toolset
+        - Campaign Reimbursement & Incentives
+     - 
+       title: Collaborative Campaigns
+       fee: Contact Us
+       features:
+         - Charity Relationship Management
+         - Athlete Fundraising Toolset
+         - Campaign Reimbursement & Incentives
+         - Collaborative Campaign Building 
+     - 
+       title: Fully Managed Campaigns
+       fee: Contact Us
+       features:
+         - Charity Relationship Management
+         - Athlete Fundraising Toolset
+         - Campaign Reimbursement & Incentives
+         - Collaborative Campaign Building
+         - Professional Athlete Promotion & Management
+  footnote: |
+    - * 5% campaign fee is based on the funding goal stated per campaign
+     
