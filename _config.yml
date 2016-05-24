@@ -8,10 +8,10 @@ launchdate: August 2016
 logo: img/carryusorg-logo-256.png
 email: hello@Carry.Us.Org
 author: Manuel Mejía
-description: > # "Write an awesome description for your new site here. 
-  Carry.Us.Org supports a healthy and inspiring community of 
-  independent fundraising athletes who, by their athletic accomplishments, 
-  raise money and awareness for public charities across the US and Canada.
+description: |
+  Carry.Us.Org helps athletes fundraise for charitable causes 
+  and build sustainable campaigns. #athletes4good @carryusorg
+
 copyright: 'Copyright &copy; 2015 Carry.Us.Org. All Rights Reserved.'
 # credits: '<a href="http://startbootstrap.com/">Start Bootstrap</a>.'
 
@@ -22,6 +22,7 @@ copyright: 'Copyright &copy; 2015 Carry.Us.Org. All Rights Reserved.'
 # Build settings
 markdown: kramdown
 permalink: pretty
+include: [_data]
 
 # ----------------------- #
 #   3rd Party Settings    #
