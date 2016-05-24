@@ -1,0 +1,87 @@
+<section id="features" class="container">
+
+<header style="text-align: center;margin:1em 0;">
+<h1><big>Features</big></h1>
+ <h3>Launching in {{site.launchdate}}, {{site.title}} will offer …</h3>
+ </header>
+ <br/>
+
+<!-- Page Content -->
+{% for feature in site.data.product.features %}
+<div class="row">
+  <h3 class="thumbnail col-sm-3">
+    <img class="img-responsive" src="{{ feature.img }}" alt="">
+    <small class="attribution">{% include attribute.html img=feature.img%}</small>
+  </h3>
+  <div class="caption col-sm-9">
+    <h3>{{ feature.title }}</h3>
+    {{ feature.description | markdownify}}
+  </div>
+</div>
+{% endfor %}
+</section>
+{%comment%}
+{% assign featureIsOdd = forloop.index | modulo:2 %}
+{%if featureIsOdd > 0%}col-sm-push-8{%endif%}
+{%if featureIsOdd > 0%}col-sm-pull-4 {%endif%}
+{%endcomment%}
+
+
+<hr/>
+
+<section id="pricing" class="container">
+
+<header style="text-align: center;margin:1em 0;" class="row">
+<h1 class="clearfix"><big>{{site.data.product.pricing.title}}</big></h1>
+<div class="col-sm-10 col-sm-offset-1">
+{{ site.data.product.pricing.description | markdownify}}
+</div>
+</header>
+ <br/>
+
+{% assign pricingColWidth = site.data.product.pricing.levels.size %}
+{% assign pricingColWidth = 12 | divided_by : pricingColWidth %}
+
+<div class="row">
+<!-- Page Content -->
+{% for level in site.data.product.pricing.levels %}
+<div class="col-md-{{pricingColWidth}} ">
+<div class="panel panel-{%if level.highlight %}primary{%else%}default{%endif%} text-center">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h3>{{ level.title }}</h3></div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item clearfix">
+    <span class="col-xs-6 text-right">Fee:</span>
+    <span class="col-xs-6 text-left">{{level.fee}}</span>
+    </li>
+    <li class="list-group-item clearfix">
+    <span class="col-xs-6 text-right">Availability:</span>
+    <span class="col-xs-6 text-left">{{level.availability}}</span>
+    </li>
+    {% for pricingfeature in site.data.product.pricing.features %}
+    <li class="list-group-item clearfix">
+      <span class="col-xs-6 text-right">{{pricingfeature}}:</span>
+      <big class="col-xs-6 text-left">
+      {%assign levelFeatureIndex = forloop.index | minus : 1%}
+      {%if level.features[levelFeatureIndex]%}
+      <i class="fa fa-check text-success"></i>
+      {%else%}
+      <i class="fa fa-times text-warning"></i>
+      {%endif%}
+      </big>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+{% endfor %}
+</div>
+<ul class="clearfix list-unstyled">
+    {% for footnote in site.data.product.pricing.footnotes %}
+    <li class="pull-right"><small>{{footnote}}</small></li>
+    {% endfor %}
+</ul>
+
+</section>
