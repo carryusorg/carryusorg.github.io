@@ -98,6 +98,10 @@ h6 {
     font-weight: 700;
 }
 
+p a {
+  text-decoration: $link-decoration;
+}
+
 .lead {
     font-size: 18px;
     font-weight: 400;
@@ -259,4 +263,7 @@ img.icon{
 }
 .text-left{
     text-align: left;
+}
+.font-xx-large{
+    font-size: xx-large;
 }

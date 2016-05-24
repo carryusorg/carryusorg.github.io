@@ -58,11 +58,14 @@ $body-bg:               #2B3E50 !default;
 $text-color:            $gray-lighter !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $brand-warning !default;
+//** Link hover decoration.
+$link-decoration: underline !default;
+
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
 //** Link hover decoration.
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 //== Typography

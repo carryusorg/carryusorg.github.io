@@ -3,8 +3,8 @@
 <header style="text-align: center;margin:1em 0;">
 <h1><big>Features</big></h1>
  <h3>Launching in {{site.launchdate}}, {{site.title}} will offer …</h3>
- </header>
- <br/>
+</header>
+<br/>
 
 <!-- Page Content -->
 {% for feature in site.data.product.features %}
@@ -27,6 +27,8 @@
 {%endcomment%}
 
 
+<hr/>
+    {% include signup-button.html %}
 <hr/>
 
 <section id="pricing" class="container">
@@ -53,28 +55,37 @@
   <!-- List group -->
   <ul class="list-group">
     <li class="list-group-item clearfix">
-    <span class="col-xs-6 text-right">Fee:</span>
+    <span class="col-xs-6 text-right">Service Fee *</span>
     <span class="col-xs-6 text-left">{{level.fee}}</span>
     </li>
     <li class="list-group-item clearfix">
-    <span class="col-xs-6 text-right">Availability:</span>
-    <span class="col-xs-6 text-left">{{level.availability}}</span>
+    <span class="col-xs-6 text-right">Availability</span>
+    <span class="col-xs-6 text-left">
+    {%if level.invite %}Invite Only{%else%}Open to All{%endif%}</span>
     </li>
     {% for pricingfeature in site.data.product.pricing.features %}
     <li class="list-group-item clearfix">
-      <span class="col-xs-6 text-right">{{pricingfeature}}:</span>
+      <span class="col-xs-6 text-right">{{pricingfeature}}</span>
       <big class="col-xs-6 text-left">
       {%assign levelFeatureIndex = forloop.index | minus : 1%}
       {%if level.features[levelFeatureIndex]%}
-      <i class="fa fa-check text-success"></i>
+      <i class="fa fa-check text-success font-xx-large"></i>
       {%else%}
-      <i class="fa fa-times text-warning"></i>
+      <i class="fa fa-times text-warning font-xx-large"></i>
       {%endif%}
       </big>
     </li>
     {% endfor %}
   </ul>
+
+  <div class="panel-footer">
+    <button type="button" class="btn btn-primary btn-lg" 
+    data-toggle="modal" data-target="#interestFormModal">
+    {%if level.invite %}Request an Invitation{%else%}Sign Up{%endif%}
+    </button>
+  </div>
 </div>
+
 </div>
 {% endfor %}
 </div>

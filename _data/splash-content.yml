@@ -8,7 +8,7 @@
     and where our animals and environment are treated with care and respect.
 -
   link: Imagine
-  img: img/belledonne-en-crete.jpg
+  img: /img/belledonne-en-crete.jpg
   # img: img/woman-hiker-california.jpg
   title: Imagine a world 
   subtitle: where charities are well funded … 
@@ -16,8 +16,7 @@
 
 -
   link: Carry Us
-  img: /img/mountain-bike-transalp-2.jpg
-  # img: /img/brazilian-runner-lg.jpg
+  img: /img/mountain-bike-transalp-3.jpg
   icon: img/carryusorg-logo-256.png
   title: Carry.Us.Org
   subtitle: is a charitable fundraising platform for athletes.

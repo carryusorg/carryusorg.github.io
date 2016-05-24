@@ -1,13 +1,13 @@
 features:
   -
     title: Campaign Reimbursement & Incentives
-    img: /img/women-desert-mtb-win.jpg
+    img: /img/mt-kenya-epik.jpg
     description: |
-      Let's face it, independent fundraising is a lot of hard work. Many over taxed and 
-      under funded charities hope that enthusiastic and big hearted supporters would
+      Let's face it, independent fundraising is a lot of hard work. Many overtaxed 
+      charities hope that enthusiastic and big hearted volunteers would
       be happy to shoulder this burden. While most of us are enthusiastic and big 
-      hearted, it would still be nice to see independent fundraisers rewarded for their 
-      efforts. Here's how we see it:
+      hearted, financial support can make the difference between a one time runner and 
+      a sustained campaigner. This is how Carry.Us.Org can help.
 
       - athletes can state their campaign expenses alongside the funding goals for every new campaign
       - these campaign expenses can be reimbursed by tips given transparently during the donation process
@@ -15,26 +15,26 @@ features:
       - these incentives may be virtual badges and/or real valuable gifts
       - incentive gifts are solicited from sponsoring nonprofit and for-profit corporations
   - 
-    title: Athlete Fundraising Toolset
-    img: /img/brazilian-runner.jpg
+    title: Fundraising Tools for Athletes
+    img: /img/climber-in-the-french-alps.jpg
     description: |
-      Athletic fundraisers are unique to all others in that there is a measurable challenge
+      Athletic fundraisers are unique to all others, in that there is a measurable challenge
       that one endeavors to overcome in order to inspire others to give. With the right tools
-      and creativity, an athlete can leverage these challenging experience to inspire 
+      and creativity, an athlete can leverage her challenging experiences to inspire 
       thousands of others in support of her cause. With our suite of communication and 
       outreach tools, Carry.Us.Org brings these challenges to life.
 
       - campaign microsites to promote your cause and your fundraising progress
       - a mobile app to track your athletic progress and update your campaign story
-      - recieve donations on your phone or on your microsite
-      - collect donor information on your phone of or on your microsite
-      - send emails and post social media updates
+      - receive donations on your phone or on your microsite
+      - collect donor information on your phone or on your microsite
+      - send emails and post social media updates from the field
       - ect... 
   - 
     title: Charity Relationship Management 
-    img: /img/mt-kenya-epik.jpg
+    img: /img/swimmer-in-the-night.jpg
     description: |
-      Charitable organizations are typically over worked and under staffed. 
+      Charitable organizations are typically overworked and under staffed. 
       It's no wonder that they don't have the time or resources to cater to
       the varying needs of independent fundraisers. That's where Cary.Us.Org 
       fits in. We will negotiate on the athletes behalf, to secure a relationship
@@ -49,35 +49,34 @@ features:
 pricing:
   title: Campaign Pricing
   description: |
-    Carry.Us.Org is funded only by tips. **We will never charge a service fee to the athletes, 
+    Carry.Us.Org is funded only by tips. **We will never charge a fee to the athletes, 
     or take a cut from the donations raised**{:.text-warning}. For each active campaign, 
-    we deduct a single flat fee from the campaign reimbursement tips. This fee is calculated 
-    as a percentage of the campaign's stated funding goal. If not enough tips are 
-    collected to cover the whole fee, the remainder will be waived. 
+    we calculate a service fee based on a percentage of the campaign's stated funding goal.
+    This service fee is included as the first campaign expense, and paid for by the campaign 
+    reimbursement tips.
   features:
     - Charity Relationship Management
-    - Athlete Fundraising Toolset
+    - Fundraising Tools for Athletes
     - Campaign Reimbursement & Incentives
-    - Collaborative Campaign Mangement 
+    - Collaborative Campaign Management 
     - Professional Athlete Promotion
   footnotes: 
-    - "* This fee is is deducted from the campaign tips, and calculated as a percentage of the campaign's funding goal."
+    - "* This fee is calculated as a percentage of the campaign's funding goal, and deducted only from the campaign tips."
   levels:
     -
-      title: Independent Campaign
+      title: Independent Campaigns
       highlight: true
       img: /img/brazilian-runner.jpg
-      fee: 5% *
-      availability: Open to all
+      fee: 5%
       features:
         - true
         - true
         - true
     - 
-      title: Collaborative Campaign
+      title: Collaborative Campaigns
       img: /img/mt-kenya-epik.jpg
-      fee: Contact Us
-      availability: Invite Only
+      fee: 5% - 25%
+      invite: true
       features:
         - true
         - true
