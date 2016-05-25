@@ -1,17 +1,18 @@
 -
   name: Manuel Mejia
   title: Co-Founder / Product Lead
-  img: 
+  img:
   social:
     - title: linkedin
       url: https://linkedin.com/in/manimejia
     - title: github
       url: https://github.com/manimejia
 
-- 
+-
   name: Nat Evory
   title: Co-Founder / Development Lead
   img:
+  social:
     - title: linkedin
       url: https://linkedin.com/in/natevory
     - title: github
