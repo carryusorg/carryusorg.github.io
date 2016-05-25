@@ -16,14 +16,18 @@
 
 -
   link: Carry Us
-  img: /img/mountain-bike-transalp-3.jpg
+  # img: /img/mountain-bike-transalp-2.jpg
+  img: /img/mt-kenya-epik-2.jpg
   icon: img/carryusorg-logo-256.png
   title: Carry.Us.Org
-  subtitle: is a charitable fundraising platform for athletes.
-  bodytitle: To deepen the impact of your athletic experiences, 
+  bodytitle: |
+    We help athletes fundraise for charitable causes  
+    and build sustainable campaigns.
   body: |
+    To deepen the impact of your athletic experiences, <br class="hidden-sm"/>
     Carry.Us.Org will mentor and guide you with a suite of online tools 
-    and professional expertise. <br class="hidden-sm"/> Our mission is to support you in fundraising 
+    and professional expertise. <br class="hidden-sm"/> 
+    We will support you in fundraising 
     on your own terms for the charities of your choice.
     
     
