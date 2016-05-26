@@ -25,7 +25,7 @@
         #{{site.social.hashtag}} <span class="caret"></span>
         </button>  
         <ul class="dropdown-menu">
-          <li><a>Tag Us</a></li>
+          <li><a>Tag {{site.social.tag | default : "Us"}}</a></li>
           {%for social in site.social.accounts%}
           {%unless social.hashtag %}{%if social.hashtagurl %}
           <li>
