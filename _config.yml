@@ -29,16 +29,21 @@ include: [_data]
 # ----------------------- #
 favicon: /img/carryusorg-logo-256.png
 
-
 social:
-  - title: facebook
-    url: https://www.facebook.com/carryusorg
-  - title: twitter
-    url: https://twitter.com/carryusorg
-  - title: instagram
-    url: https:instagram.com/carryusorg
-  # - title: github
-    # url: https://github.com/carryusorg
+  username: carryusorg
+  hashtag: athletes4good
+  accounts:
+    - title: facebook
+      url: https://www.facebook.com/carryusorg
+      hashtagurl: https://www.facebook.com/search/top/?q=%23athletes4good
+    - title: twitter
+      url: https://twitter.com/carryusorg
+      hashtagurl: https://twitter.com/hashtag/athletes4good
+    - title: instagram
+      url: https:instagram.com/carryusorg
+      hashtagurl: https://www.instagram.com/explore/tags/athletes4good
+    # - title: github
+      # url: https://github.com/carryusorg
 
 email:
   - hello@carry.us.org

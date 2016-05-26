@@ -12,16 +12,6 @@
   background-color: $gray-dark;
 }
 
-.navbar-default a.inverse {
-    background-color: $navbar-inverse-bg !important;
-}
-.navbar-default a.inverse:hover {
-    background-color: $navbar-inverse-link-hover-bg !important;
-}
-.navbar-default .active > a.inverse {
-    background-color: $navbar-inverse-link-active-bg !important;
-}
-
 
 // Reset and dependencies
 @import "bootstrap/normalize";
@@ -266,4 +256,22 @@ img.icon{
 }
 .font-xx-large{
     font-size: xx-large;
+}
+
+/** navbar links **/
+.navbar-default a.inverse {
+    background-color: $navbar-inverse-bg !important;
+}
+.navbar-default a.inverse:hover {
+    background-color: $navbar-inverse-link-hover-bg !important;
+}
+.navbar-default .active > a.inverse {
+    background-color: $navbar-inverse-link-active-bg !important;
+}
+
+.navbar-default .btn-link,
+.navbar-default .btn-link:hover,
+.navbar-default .open .btn-link {
+  color: $brand-warning;
+  // font-size:1em;
 }
