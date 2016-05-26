@@ -20,9 +20,11 @@
   img: /img/mt-kenya-epik-2.jpg
   icon: img/carryusorg-logo-256.png
   title: Carry.Us.Org
-  bodytitle: |
-    We help athletes fundraise for charitable causes  
+  subtitle: |
+    We help athletes fundraise for charitable causes <br class="hidden-sm"/>
     and build sustainable campaigns.
+  bodytitle: |
+
   body: |
     To deepen the impact of your athletic experiences, <br class="hidden-sm"/>
     Carry.Us.Org will mentor and guide you with a suite of online tools 

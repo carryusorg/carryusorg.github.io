@@ -3,85 +3,74 @@ features:
     title: Campaign Reimbursement & Incentives
     img: /img/women-desert-mtb-win.jpg
     description: |
-      Let's face it, independent fundraising is a lot of hard work. Many overtaxed 
-      charities hope that these enthusiastic and big hearted volunteers would
-      be happy to shoulder this burden. While most are enthusiastic and big 
-      hearted, financial support can make the difference between a one time runner and 
-      a sustained campaigner. This is how Carry.Us.Org can help.
-
-      - athletes can state their campaign expenses alongside the funding goals for every new campaign
-      - these campaign expenses can be reimbursed by tips given transparently during the donation process
-      - high value campaigns, and the athletes that run them, are rewarded with incentives
-      - these incentives may be virtual badges and/or real valuable gifts
-      - incentive gifts are solicited from sponsoring nonprofit and for-profit corporations
+      the difference between a one time runner and a sustained fundraiser
+    benefits:
+      - itemize athlete expenses for any campaign
+      - expenses will be reimbursed by campaign tips 
+      - tips are given transparently during the donation process
+      - high value campaigns are rewarded with incentives
+      - incentives are virtual badges and real valuable gifts
   - 
     title: Fundraising Tools for Athletes
     img: /img/climber-in-the-french-alps.jpg
     description: |
-      Athletic fundraisers are unique to all others, in that there is a measurable challenge
-      that one endeavors to overcome in order to inspire others to give. With the right tools
-      and creativity, an athlete can leverage her challenging experiences to inspire 
-      thousands of others in support of her cause. With our suite of communication and 
-      outreach tools, Carry.Us.Org brings these challenges to life for every athlete.
-
-      - campaign microsites to promote the cause, the athlete, and the fundraising progress
-      - a mobile app for athletes, to track the their challenge progress and update the campaign story
-      - collect donations in person via the mobile app or impromptu via the campaign microsite
-      - collect and leverage donor information via the mobile app phone or the campaign microsite
-      - stay connected with email balsts and integrated social media updates from any connected device
+      to inspire thousands of others in support of thier causes
+    benefits:
+      - a microsites to promote the campaign
+      - a mobile app for athletes to track their progress
+      - collect donations in person or on the web
+      - collect and leverage donor data to maximize impact
+      - reach out with integrated email and social media updates
       - ect... 
   - 
     title: Charity Relationship Management 
     img: /img/swimmer-in-the-night.jpg
     description: |
-      Charitable organizations are typically overworked and under staffed. 
-      It's no wonder that they don't have the time or resources to cater to
-      the varying needs of independent fundraisers. That's where Carry.Us.Org 
-      fits in. We will fill the communications gap, and negotiate a relationship
-      that benefits all parties. Bellow are some examples of the discussions we are having: 
-    
-      - a single point of contact within the charity organization to smooth communications
-      - the use of prominent charity branding to legitimatize an athlete's campaign 
-      - the ability to fundraise for individual projects within the charity
+      to get the most benefit from independent fundraising. 
+    benefits:
+      - a single point of contact for charity communications
+      - effective charity branding to legitimatize each campaign 
+      - targeted fundraising projects within each charity
       - solicitation of incentive gifts for high value campaigns
       - ect…
 
 pricing:
   title: Campaign Pricing
   description: |
-    Carry.Us.Org is funded only by tips. **We will never charge a fee to the athletes, 
-    or take a cut from the donations raised**{:.text-warning}. For each active campaign, 
-    we calculate a service fee based on a percentage of the campaign's stated funding goal.
-    This service fee is included as the first campaign expense, and paid for by the campaign 
-    reimbursement tips.
+    Carry.Us.Org is funded only by tips, which are shared with the athlete to 
+    to cover campaign expenses.  
+    <big class="text-warning">We will never charge a fee to the athletes, 
+    or take a cut from the donations raised.</big>
   features:
-    - Charity Relationship Management
-    - Fundraising Tools for Athletes
     - Campaign Reimbursement & Incentives
-    - Collaborative Campaign Management 
-    - Professional Athlete Promotion
+    - Fundraising Tools for Athletes
+    - Charity Relationship Management
   footnotes: 
-    - "* This fee is calculated as a percentage of the campaign's funding goal, and deducted only from the campaign tips."
+    - "* Each athlete will be offered a share of the tips given, until their campaign expenses are fully reimbursed."
   levels:
     -
-      title: Independent Campaigns
+      title: Alpha Pre-Release 
+      highlight: false
+      img: /img/brazilian-runner.jpg
+      invite: true
+      availability: July 2016
+      fee: No Fee
+      tips: 100%
+      features:
+        - true
+        - 
+        - false
+    -
+      title: Independent Campaign
       highlight: true
       img: /img/brazilian-runner.jpg
-      fee: 5%
+      availability: true
+      fee: No Fee
+      tips: 50%
       features:
         - true
         - true
         - true
-    - 
-      title: Collaborative Campaigns
-      img: /img/mt-kenya-epik.jpg
-      fee: 5% - 25%
-      invite: true
-      features:
-        - true
-        - true
-        - true
-        - true
-        - true
+
 
      
