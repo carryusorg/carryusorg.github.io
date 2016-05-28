@@ -48,3 +48,16 @@ social:
 
 email:
   - hello@carry.us.org
+
+# front matter defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      opengraph:
+        -
+          property: image
+          content: http://carry.us.org/img/twin-peaks-runner.jpg
+

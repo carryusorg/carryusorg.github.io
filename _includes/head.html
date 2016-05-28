@@ -6,6 +6,14 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
 
+    <!-- 
+    opengraph metadata for facebook
+    https://developers.facebook.com/docs/sharing/webmasters#markup
+     -->
+    {%for tag in page.opengraph%}
+    <meta property="og:{{tag.property}}" content="{{tag.content}}" />
+    {%endfor%}
+
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     {% if site.favicon %}
