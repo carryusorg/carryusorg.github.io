@@ -10,9 +10,11 @@
     opengraph metadata for facebook
     https://developers.facebook.com/docs/sharing/webmasters#markup
      -->
-    {%for tag in page.opengraph%}
-    <meta property="og:{{tag.property}}" content="{{tag.content}}" />
-    {%endfor%}
+    <meta property="og:url" content="{{page.opengraph.url | default : site.url}}" />
+    <meta property="og:title" content="{{page.opengraph.title | default : site.title}}" />
+    <meta property="og:author" content="{{page.opengraph.author | default : site.author}}" />
+    <meta property="og:description" content="{{page.opengraph.description | default : site.description}}" />
+    <meta property="og:image" content="{{page.opengraph.image | default : site.image}}" />
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
