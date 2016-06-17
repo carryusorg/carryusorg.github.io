@@ -3,49 +3,82 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
-// Palette URL: http://paletton.com/#uid=70p0u0kshr+fjBxlwtXunlzCVfK */
+/* Color Palette URL: http://paletton.com/#uid=70f0D0kshr+i5QZobB2q8ijiHaN */
 
-$color-primary-0: #DF6A1A;  // Orange */
-$color-primary-1: #FFB685;
-$color-primary-2: #EF8F4E;
-$color-primary-3: #AC4B09;
-$color-primary-4: #7D3300;
+$color-primary-1: #FF986F;
+$color-primary-2: #FF753E;
+$color-primary-0: #DF521A;  // Orange Primary color */
+$color-primary-3: #923D1B;
+$color-primary-4: #563224;
 
-$color-secondary-1-0: #DF971A;  // Yellow */
-$color-secondary-1-1: #FFD385;
-$color-secondary-1-2: #EFB44E;
-$color-secondary-1-3: #AC7109;
-$color-secondary-1-4: #7D5000;
+$color-secondary-1: #FFCB6F;
+$color-secondary-2: #FFB93E;
+$color-secondary-0: #DF971A;  // Yellow Secondary color (1) */
+$color-secondary-3: #92671B;
+$color-secondary-4: #564424;
 
-$color-secondary-2-0: #1D4B93;  // Blue */
-$color-secondary-2-1: #6989BA;
-$color-secondary-2-2: #3D639E;
-$color-secondary-2-3: #103672;
-$color-secondary-2-4: #062453;
+$color-tertiary-1: #6F9CE4;
+$color-tertiary-2: #3A6BB9;
+$color-tertiary-0: #1D4B94;  // Blue Secondary color (2) */
+$color-tertiary-3: #193560;
+$color-tertiary-4: #1B2639;
 
-$color-complement-0: #108D78;  // Green */
-$color-complement-1: #5EB5A6;
-$color-complement-2: #329786;
-$color-complement-3: #066D5B;
-$color-complement-4: #004F42;
+$color-complement-1: #64E6AE;
+$color-complement-2: #2EBE80;
+$color-complement-0: #12995F;  // Green Complement color */
+$color-complement-3: #126441;
+$color-complement-4: #193B2C;
+
+/* Gray Palette URL: http://paletton.com/#uid=70f0D0k9ZdA46z07cnVjX8LrO6B */
+
+$gray-primary-0: #6C544B;  // Main Primary color */
+$gray-primary-1: #FFE8DE;
+$gray-primary-2: #BFA094;
+$gray-primary-3: #46271A;
+$gray-primary-4: #351407;
+
+$gray-secondary-0: #6C604B;  // Main Secondary color (1) */
+$gray-secondary-1: #FFF3DE;
+$gray-secondary-2: #BFAF94;
+$gray-secondary-3: #46361A;
+$gray-secondary-4: #352407;
+
+$gray-tertiary-0: #333B48;  // Main Secondary color (2) */
+$gray-tertiary-1: #9CA4B1;
+$gray-tertiary-2: #646E7E;
+$gray-tertiary-3: #141E2E;
+$gray-tertiary-4: #071223;
+
+$gray-complement-0: #334A40;  // Main Complement color */
+$gray-complement-1: #9FB6AC;
+$gray-complement-2: #658376;
+$gray-complement-3: #123023;
+$gray-complement-4: #052417;
+
 
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
-$gray-lighter:           #EBEBEB !default; // #eee
-$gray-light:             #4E5D6C !default;   // #999
-$gray:                   darken($gray-light, 13.5%) !default; // #555
-$gray-dark:              darken($gray-light, 20%) !default;   // #333
-$gray-darker:            darken($gray-light, 33.5%) !default; // #222
+$gray-base:              $gray-tertiary-0 !default;
+$gray-darker:            $gray-tertiary-4 !default; //darken($gray-base, 10%); // #222
+$gray-dark:              $gray-tertiary-3 !default; //darken($gray-base, 5%) !default;   // #333
+$gray:                   lighten($gray-tertiary-0,5%) !default; //lighten($gray-base, 5%) !default;
+$gray-light:             $gray-tertiary-2 !default; //lighten($gray-base, 20%) !default;   // #999
+$gray-lighter:           $gray-tertiary-1 !default; //lighten($gray-base, 50%) !default; // #eee
 
-$brand-primary:         #AC4B09 !default;
-$brand-success:         #108D78 !default;
-$brand-info:            #1D4B93 !default;
-$brand-warning:         #DF971A !default;
-$brand-danger:          #DF6A1A !default;
+$brand-primary:         $color-primary-0 !default;
+$brand-success:         $color-complement-0 !default;
+$brand-info:            $color-tertiary-0 !default;
+$brand-warning:         $color-secondary-0 !default;
+$brand-danger:          $brand-primary !default;
+
+$brand-primary-dark:         $color-primary-3 !default;
+$brand-success-dark:         $color-complement-3 !default;
+$brand-info-dark:            $color-tertiary-3 !default;
+$brand-warning-dark:         $color-secondary-3 !default;
+$brand-danger-dark:          $brand-primary-dark !default;
 
 
 //== Scaffolding
@@ -53,9 +86,9 @@ $brand-danger:          #DF6A1A !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #2B3E50 !default;
+$body-bg:               $gray-base !default;
 //** Global text color on `<body>`.
-$text-color:            $gray-lighter !default;
+$text-color:            white !default;
 
 //** Global textual link color.
 $link-color:            $brand-warning !default;
@@ -421,7 +454,7 @@ $navbar-default-toggle-border-color:       transparent !default;
 //=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      $text-color !default;
-$navbar-inverse-bg:                         $brand-primary !default;
+$navbar-inverse-bg:                         $brand-primary-dark !default;
 $navbar-inverse-border:                     transparent !default;
 
 // Inverted navbar links
@@ -486,7 +519,7 @@ $pagination-hover-bg:                  $table-bg-hover !default;
 $pagination-hover-border:              transparent !default;
 
 $pagination-active-color:              $text-color !default;
-$pagination-active-bg:                 $brand-primary !default;
+$pagination-active-bg:                 $brand-primary-dark !default;
 $pagination-active-border:             transparent !default;
 
 $pagination-disabled-color:            darken($table-bg-hover, 10%) !default;
@@ -527,19 +560,19 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //## Define colors for form feedback states and, by default, alerts.
 
 $state-success-text:             $text-color !default;
-$state-success-bg:               $brand-success !default;
+$state-success-bg:               $brand-success-dark !default;
 $state-success-border:           transparent !default;
 
 $state-info-text:                $text-color !default;
-$state-info-bg:                  $brand-info !default;
+$state-info-bg:                  $brand-info-dark !default;
 $state-info-border:              transparent !default;
 
 $state-warning-text:             $text-color !default;
-$state-warning-bg:               $brand-warning !default;
+$state-warning-bg:               $brand-warning-dark !default;
 $state-warning-border:           transparent !default;
 
 $state-danger-text:              $text-color !default;
-$state-danger-bg:                $brand-danger !default;
+$state-danger-bg:                $brand-danger-dark !default;
 $state-danger-border:            transparent !default;
 
 
@@ -597,15 +630,15 @@ $popover-arrow-outer-fallback-color:  transparent !default;
 //** Default label background color
 $label-default-bg:            $gray-light !default;
 //** Primary label background color
-$label-primary-bg:            $brand-primary !default;
+$label-primary-bg:            $brand-primary-dark !default;
 //** Success label background color
-$label-success-bg:            $brand-success !default;
+$label-success-bg:            $brand-success-dark !default;
 //** Info label background color
-$label-info-bg:               $brand-info !default;
+$label-info-bg:               $brand-info-dark !default;
 //** Warning label background color
-$label-warning-bg:            $brand-warning !default;
+$label-warning-bg:            $brand-warning-dark !default;
 //** Danger label background color
-$label-danger-bg:             $brand-danger !default;
+$label-danger-bg:             $brand-danger-dark !default;
 
 //** Default label text color
 $label-color:                 #fff !default;
@@ -683,15 +716,15 @@ $progress-bar-color:          #fff !default;
 $progress-border-radius:      $border-radius-base !default;
 
 //** Default progress bar color
-$progress-bar-bg:             $brand-primary !default;
+$progress-bar-bg:             $brand-primary-dark !default;
 //** Success progress bar color
-$progress-bar-success-bg:     $brand-success !default;
+$progress-bar-success-bg:     $brand-success-dark !default;
 //** Warning progress bar color
-$progress-bar-warning-bg:     $brand-warning !default;
+$progress-bar-warning-bg:     $brand-warning-dark !default;
 //** Danger progress bar color
-$progress-bar-danger-bg:      $brand-danger !default;
+$progress-bar-danger-bg:      $brand-danger-dark !default;
 //** Info progress bar color
-$progress-bar-info-bg:        $brand-info !default;
+$progress-bar-info-bg:        $brand-info-dark !default;
 
 
 //== List group
@@ -748,7 +781,7 @@ $panel-default-heading-bg:    #f5f5f5 !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        transparent !default;
-$panel-primary-heading-bg:    $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary-dark !default;
 
 $panel-success-text:          $state-success-text !default;
 $panel-success-border:        transparent !default;

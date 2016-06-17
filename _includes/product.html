@@ -59,7 +59,7 @@
 <!-- Page Content -->
 {% for level in site.data.product.pricing.levels %}
 <div class="col-md-{{pricingColWidth}} {%if pricingColOffset%}col-md-offset-{{pricingColOffset}}{%endif%}">
-<div class="panel panel-{%if level.highlight %}primary{%else%}default{%endif%} text-center">
+<div class="panel panel-{{level.highlight | default : default }} text-center">
   <!-- Default panel contents -->
   <div class="panel-heading"><h3>{{ level.title }}</h3></div>
 
@@ -101,7 +101,7 @@
   </ul>
 
   <div class="panel-footer">
-    <button type="button" class="btn btn-{%if level.invite %}default{%else%}primary{%endif%} btn-lg" 
+    <button type="button" class="btn btn-{{level.highlight | default : default }} btn-lg" 
     data-toggle="modal" data-target="#interestFormModal">
     {%if level.invite %}Request an Invitation
     {%elsif site.launchdate%}

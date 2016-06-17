@@ -50,7 +50,7 @@ pricing:
   levels:
     -
       title: Alpha Pre-Release 
-      highlight: false
+      highlight: warning
       img: /img/brazilian-runner.jpg
       invite: true
       availability: July 2016
@@ -62,7 +62,7 @@ pricing:
         - false
     -
       title: Independent Campaign
-      highlight: true
+      highlight: primary
       img: /img/brazilian-runner.jpg
       availability: true
       fee: No Fee
